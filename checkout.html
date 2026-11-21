@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout · Abracadabra muebles</title>
+  <meta name="description" content="Checkout simulado de la tienda ficticia Abracadabra muebles.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230071e3'/%3E%3Ctext x='16' y='23' font-size='19' text-anchor='middle' fill='white' font-family='Arial' font-weight='700'%3EA%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header class="cabecera">
+    <div class="cabecera-in">
+      <a class="logo" href="index.html">Abracadabra <span>muebles</span></a>
+      <nav>
+        <a href="index.html">Catálogo</a>
+        <a href="carrito.html">Carrito <span id="contador-carrito" class="contador sin-items">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <h1 class="titulo-pagina">Checkout</h1>
+    <div class="pasos" aria-label="Pasos del checkout">
+      <div class="paso activo" id="indicador-1">1 · Envío</div>
+      <div class="paso" id="indicador-2">2 · Pago simulado</div>
+    </div>
+
+    <div class="dos-columnas">
+      <div>
+        <!-- PASO 1: ENVÍO -->
+        <form id="form-envio" class="panel" autocomplete="off">
+          <h2>Envío</h2>
+          <label class="campo">Nombre (ficticio)
+            <input type="text" id="nombre" placeholder="Ej.: Cliente Demo" autocomplete="off" required maxlength="40">
+            <small>Usa un nombre inventado. No se guarda ni se envía a Google Analytics.</small>
+          </label>
+          <label class="campo">País de destino
+            <select id="pais" required></select>
+          </label>
+          <fieldset>
+            <legend>Servicio de envío</legend>
+            <div class="opciones" id="opciones-servicio">
+              <label class="opcion">
+                <input type="radio" name="servicio" value="Estándar" checked>
+                <span class="op-texto">Estándar<small id="plazo-estandar"></small></span>
+                <span class="op-precio" id="precio-estandar"></span>
+              </label>
+              <label class="opcion">
+                <input type="radio" name="servicio" value="Express">
+                <span class="op-texto">Express<small id="plazo-express"></small></span>
+                <span class="op-precio" id="precio-express"></span>
+              </label>
+            </div>
+          </fieldset>
+          <p class="privacidad">No pedimos correo, teléfono, documento ni datos de tarjeta.</p>
+          <div class="fila-botones">
+            <button type="submit" class="btn">Continuar al pago</button>
+          </div>
+        </form>
+
+        <!-- PASO 2: PAGO SIMULADO -->
+        <form id="form-pago" class="panel" autocomplete="off" hidden>
+          <h2>Pago simulado</h2>
+          <fieldset>
+            <legend>Método de pago</legend>
+            <div class="opciones dos">
+              <label class="opcion"><input type="radio" name="pago" value="Tarjeta de crédito" checked><span class="op-texto">Tarjeta de crédito</span></label>
+              <label class="opcion"><input type="radio" name="pago" value="PSE"><span class="op-texto">PSE</span></label>
+              <label class="opcion"><input type="radio" name="pago" value="Nequi"><span class="op-texto">Nequi</span></label>
+              <label class="opcion"><input type="radio" name="pago" value="PayPal"><span class="op-texto">PayPal</span></label>
+            </div>
+          </fieldset>
+          <p class="privacidad">Es una simulación: no se solicita ningún dato de pago y no se cobra nada.</p>
+          <div class="fila-botones">
+            <button type="button" class="btn btn-sec" id="volver-envio">Volver al envío</button>
+            <button type="submit" class="btn" id="btn-pagar">Pagar (simulado)</button>
+          </div>
+        </form>
+      </div>
+
+      <aside class="panel resumen" id="resumen-checkout" aria-label="Resumen del pedido"></aside>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <p>Sitio académico de simulación del Diplomado en E-commerce y Negocios Internacionales Digitales. Esta tienda es ficticia: no procesa pagos reales ni guarda datos personales. Usa Google Analytics 4 con fines educativos.</p>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/productos.js"></script>
+  <script src="js/carrito.js"></script>
+  <script src="js/monitor.js"></script>
+  <script src="js/analytics.js"></script>
+  <script src="js/pagina-checkout.js"></script>
+</body>
+</html>

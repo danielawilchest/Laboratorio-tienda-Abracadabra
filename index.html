@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo · Abracadabra muebles</title>
+  <meta name="description" content="Tienda ficticia para un laboratorio académico de Google Analytics 4.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230071e3'/%3E%3Ctext x='16' y='23' font-size='19' text-anchor='middle' fill='white' font-family='Arial' font-weight='700'%3EA%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header class="cabecera">
+    <div class="cabecera-in">
+      <a class="logo" href="index.html">Abracadabra <span>muebles</span></a>
+      <nav>
+        <a href="index.html">Catálogo</a>
+        <a href="carrito.html">Carrito <span id="contador-carrito" class="contador sin-items">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <section class="hero">
+      <h1>Muebles que transforman tu hogar.</h1>
+      <p>Salas, sofás, comedores y piezas para cada rincón. Diseñados en Colombia, enviados a todo el mundo.</p>
+    </section>
+
+    <section id="banner-cupon" class="banner" aria-label="Promoción de bienvenida"></section>
+
+    <h2 class="seccion-titulo">Catálogo</h2>
+    <div id="grid-productos" class="grid-productos"></div>
+  </main>
+
+  <footer class="pie">
+    <p>Sitio académico de simulación del Diplomado en E-commerce y Negocios Internacionales Digitales. Esta tienda es ficticia: no procesa pagos reales ni guarda datos personales. Usa Google Analytics 4 con fines educativos.</p>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/productos.js"></script>
+  <script src="js/carrito.js"></script>
+  <script src="js/monitor.js"></script>
+  <script src="js/analytics.js"></script>
+  <script src="js/pagina-index.js"></script>
+</body>
+</html>
