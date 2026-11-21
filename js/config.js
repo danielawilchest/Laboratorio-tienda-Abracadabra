@@ -23,6 +23,6 @@
    false → se envían sin debug_mode (tráfico normal; no aparece en DebugView).
 */
 window.TIENDA_CONFIG = {
-  GA_MEASUREMENT_ID: "G-XXXXXXXXXX", // ← pega aquí tu ID de medición
+  GA_MEASUREMENT_ID: "G-PHE8RQ2S6Z", // ← pega aquí tu ID de medición
   DEBUG_MODE: true                    // true = modo depuración | false = normal
 };
